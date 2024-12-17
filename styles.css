@@ -1,0 +1,134 @@
+/* Custom CSS for Researcher Portfolio Website */
+:root {
+    --primary-color: #2563eb;
+    --secondary-color: #1e40af;
+    --text-primary: #1f2937;
+    --text-secondary: #4b5563;
+    --background-light: #f3f4f6;
+    --background-white: #ffffff;
+}
+
+/* Dark Mode Styles */
+.dark {
+    --text-primary: #f3f4f6;
+    --text-secondary: #e5e7eb;
+    --background-light: #1f2937;
+    --background-white: #111827;
+}
+
+/* Global Styles */
+body {
+    font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-primary);
+    background-color: var(--background-light);
+    scroll-behavior: smooth;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.dark body {
+    background-color: #111827;
+    color: #f3f4f6;
+}
+
+/* Navigation Styles */
+nav {
+    backdrop-filter: blur(10px);
+}
+
+.nav-link {
+    position: relative;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Scroll Animation */
+.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.opacity-0 {
+    opacity: 0;
+}
+
+.transform {
+    transform: translateY(10px);
+}
+
+/* Research and Publication Cards */
+.research-card, 
+.publication-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.research-card:hover, 
+.publication-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+/* Contact Section */
+#contact {
+    background: 
+        linear-gradient(135deg, var(--primary-color), var(--secondary-color)),
+        url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/svg%3E');
+}
+
+.contact-icon {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.contact-icon:hover {
+    transform: scale(1.2);
+}
+
+/* Error State Styles */
+.border-red-500 {
+    border: 2px solid red;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header {
+        padding: 2rem 1rem;
+    }
+
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.5rem; }
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--background-light);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 4px;
+}
