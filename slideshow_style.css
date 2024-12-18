@@ -1,0 +1,57 @@
+/* Slideshow Container */
+#slideshow {
+    position: relative;
+    width: 100%;
+    max-width: 893px; /* Keeps it from stretching too wide */
+    height: 500px; /* Fixed height to keep consistent ratio */
+    margin: 0 auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    background-color: #333; /* Dark background for the container */
+    border-radius: 20px; /* Rounded corners for the slideshow container */
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5); /* Shadow around the container */
+}
+
+/* Individual Slides */
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Ensures the height is always 100% of the container */
+    object-fit: cover; /* Ensures the image maintains its aspect ratio */
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+    border-radius: 20px; /* Rounded corners for images */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4); /* Shadow around each image */
+}
+
+/* Active Slide */
+.slide.active {
+    opacity: 1;
+}
+
+/* Optional: Navigation Controls (Previous and Next buttons) */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    z-index: 100;
+    border-radius: 5px; /* Optional rounded corners for navigation buttons */
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}

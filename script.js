@@ -1,5 +1,3 @@
-// Researcher Portfolio Interactive JavaScript
-
 document.addEventListener('DOMContentLoaded', () => {
     // Theme Toggle
     const themeToggle = document.getElementById('theme-toggle');
@@ -44,6 +42,9 @@ document.addEventListener('DOMContentLoaded', () => {
             const nameInput = contactForm.querySelector('#name');
             const emailInput = contactForm.querySelector('#email');
             const messageInput = contactForm.querySelector('#message');
+            const nameError = contactForm.querySelector('#name-error');
+            const emailError = contactForm.querySelector('#email-error');
+            const messageError = contactForm.querySelector('#message-error');
 
             const validateEmail = (email) => {
                 const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -55,28 +56,44 @@ document.addEventListener('DOMContentLoaded', () => {
             if (nameInput.value.trim() === '') {
                 isValid = false;
                 nameInput.classList.add('border-red-500');
+                nameError.textContent = 'Name is required';
             } else {
                 nameInput.classList.remove('border-red-500');
+                nameError.textContent = '';
             }
 
             if (!validateEmail(emailInput.value)) {
                 isValid = false;
                 emailInput.classList.add('border-red-500');
+                emailError.textContent = 'Please enter a valid email address';
             } else {
                 emailInput.classList.remove('border-red-500');
+                emailError.textContent = '';
             }
 
             if (messageInput.value.trim() === '') {
                 isValid = false;
                 messageInput.classList.add('border-red-500');
+                messageError.textContent = 'Message cannot be empty';
             } else {
                 messageInput.classList.remove('border-red-500');
+                messageError.textContent = '';
             }
 
             if (isValid) {
                 alert('Message sent successfully!');
                 contactForm.reset();
             }
+        });
+    }
+
+    // Mobile Menu Toggle
+    const hamburgerMenu = document.getElementById('hamburger-menu');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (hamburgerMenu && mobileMenu) {
+        hamburgerMenu.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
         });
     }
 });
