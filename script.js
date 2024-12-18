@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Smooth Scrolling for Navigation Links
     const navLinks = document.querySelectorAll('nav a[href^="#"]');
     navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
+        link.addEventListener('click', function (e) {
             e.preventDefault();
             const targetId = this.getAttribute('href');
             const targetSection = document.querySelector(targetId);
@@ -94,6 +94,39 @@ document.addEventListener('DOMContentLoaded', () => {
     if (hamburgerMenu && mobileMenu) {
         hamburgerMenu.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
+        });
+    }
+
+    // Scroll to Publications Section and Filter
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const publicationCards = document.querySelectorAll('.publication-card');
+
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Remove active class from all buttons
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            // Add active class to clicked button
+            button.classList.add('active');
+
+            // Get the filter category
+            const filter = button.getAttribute('data-filter');
+
+            // Show/hide publication cards based on filter
+            publicationCards.forEach(card => {
+                if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    });
+
+    // Redirect to patent_table.html when the "Patents" button is clicked
+    const patentsButton = document.getElementById('patents-button');
+    if (patentsButton) {
+        patentsButton.addEventListener('click', () => {
+            window.location.href = 'patent_table.html';
         });
     }
 });
