@@ -1,21 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Theme Toggle
-    const themeToggle = document.getElementById('theme-toggle');
-    const htmlElement = document.documentElement;
-
-    if (themeToggle) {
-        themeToggle.addEventListener('click', () => {
-            htmlElement.classList.toggle('dark');
-            const isDarkMode = htmlElement.classList.contains('dark');
-            localStorage.setItem('theme-preference', isDarkMode ? 'dark' : 'light');
-        });
-
-        const savedTheme = localStorage.getItem('theme-preference');
-        if (savedTheme === 'dark') {
-            htmlElement.classList.add('dark');
-        }
-    }
-
     // Smooth Scrolling for Navigation Links
     const navLinks = document.querySelectorAll('nav a[href^="#"]');
     navLinks.forEach(link => {
@@ -81,8 +64,29 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             if (isValid) {
-                alert('Message sent successfully!');
-                contactForm.reset();
+                // Form submission handling
+                const formData = new FormData(contactForm);
+                fetch('send-email.php', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => response.json())
+                .then(data => {
+                    const notification = document.getElementById('notification');
+                    notification.classList.remove('hidden');
+                    notification.textContent = data.success ? 'Your data has been submitted successfully!' : (data.message || 'Failed to submit. Please try again.');
+                    notification.classList.add(data.success ? 'bg-green-600' : 'bg-red-600');
+                    if (data.success) {
+                        contactForm.reset();
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    const notification = document.getElementById('notification');
+                    notification.classList.remove('hidden');
+                    notification.classList.add('bg-red-600');
+                    notification.textContent = 'An error occurred. Please try again later.';
+                });
             }
         });
     }
@@ -97,36 +101,117 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Scroll to Publications Section and Filter
+    // Publications Section Functionality
+    const publicationsGrid = document.getElementById('publications-grid');
+    const viewMoreButton = document.getElementById('view-more-publications');
+    const viewLessButton = document.getElementById('view-less-publications');
     const filterButtons = document.querySelectorAll('.filter-btn');
-    const publicationCards = document.querySelectorAll('.publication-card');
+    
+    let visibleCount = 3;
+    let currentFilter = 'all';
 
+    function updateVisibility() {
+        const cards = publicationsGrid.querySelectorAll('.publication-card');
+        const filteredCards = Array.from(cards).filter(card => {
+            const category = card.getAttribute('data-category');
+            return currentFilter === 'all' || category === currentFilter;
+        });
+
+        // Hide all cards first
+        cards.forEach(card => card.classList.add('hidden'));
+
+        // Show the appropriate number of filtered cards
+        filteredCards.forEach((card, index) => {
+            if (index < visibleCount) {
+                card.classList.remove('hidden');
+            }
+        });
+
+        // Update button visibility
+        viewMoreButton.classList.toggle('hidden', filteredCards.length <= visibleCount);
+        viewLessButton.classList.toggle('hidden', visibleCount <= 3);
+    }
+
+    // Filter button click handlers
     filterButtons.forEach(button => {
         button.addEventListener('click', () => {
-            // Remove active class from all buttons
+            currentFilter = button.getAttribute('data-filter');
+            visibleCount = 3; // Reset visible count when filtering
+            
+            // Update active button state
             filterButtons.forEach(btn => btn.classList.remove('active'));
-            // Add active class to clicked button
             button.classList.add('active');
-
-            // Get the filter category
-            const filter = button.getAttribute('data-filter');
-
-            // Show/hide publication cards based on filter
-            publicationCards.forEach(card => {
-                if (filter === 'all' || card.getAttribute('data-category') === filter) {
-                    card.style.display = 'block';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
+            
+            updateVisibility();
         });
     });
 
-    // Redirect to patent_table.html when the "Patents" button is clicked
+    // View More button click handler
+    viewMoreButton.addEventListener('click', () => {
+        const filteredCards = Array.from(publicationsGrid.querySelectorAll('.publication-card'))
+            .filter(card => currentFilter === 'all' || card.getAttribute('data-category') === currentFilter);
+        
+        visibleCount = Math.min(visibleCount + 3, filteredCards.length);
+        updateVisibility();
+    });
+
+    // View Less button click handler
+    viewLessButton.addEventListener('click', () => {
+        visibleCount = 3;
+        updateVisibility();
+    });
+
+    // Initialize publication visibility
+    updateVisibility();
+
+    // Patents button handler
     const patentsButton = document.getElementById('patents-button');
     if (patentsButton) {
         patentsButton.addEventListener('click', () => {
             window.location.href = 'patent_table.html';
         });
     }
+
+    // Initialize feather icons if available
+    if (typeof feather !== 'undefined') {
+        feather.replace();
+    }
+
+    // Research Section Functionality
+    const researchGrid = document.querySelector('#Research .grid');
+    const viewMoreResearch = document.getElementById('view-more-research');
+    const viewLessResearch = document.getElementById('view-less-research');
+
+    let visibleResearchCount = 3; // Initially visible research items
+
+    // Function to update visibility of research cards
+    function updateResearchVisibility() {
+        const researchCards = researchGrid.querySelectorAll('.research-card');
+        
+        researchCards.forEach((card, index) => {
+            if (index < visibleResearchCount) {
+                card.classList.remove('hidden');
+            } else {
+                card.classList.add('hidden');
+            }
+        });
+
+        viewMoreResearch.classList.toggle('hidden', visibleResearchCount >= researchCards.length);
+        viewLessResearch.classList.toggle('hidden', visibleResearchCount <= 3);
+    }
+
+    // Event listener for "View More"
+    viewMoreResearch.addEventListener('click', () => {
+        visibleResearchCount += 3; // Show 3 more items
+        updateResearchVisibility();
+    });
+
+    // Event listener for "View Less"
+    viewLessResearch.addEventListener('click', () => {
+        visibleResearchCount = 3; // Reset to initial count
+        updateResearchVisibility();
+    });
+
+    // Initialize visibility on load
+    updateResearchVisibility();
 });

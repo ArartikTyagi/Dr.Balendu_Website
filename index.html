@@ -12,6 +12,9 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
 
+    <!-- Include Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
     <!-- Feather Icons -->
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <script src="script.js"></script>
@@ -20,13 +23,21 @@
 <body class="bg-gray-100 font-sans leading-normal tracking-normal">
 
     <!-- Navigation Bar -->
-    <nav class="float w-full top-0 z-50 bg-white shadow-md">
+    <nav class="w-full top-0 z-50 bg-white shadow-md">
         <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <div class="text-2xl font-bold text-gray-800">Dr. Balendu Shekher Giri</div>
+            <div class="text-2xl font-bold text-gray-800">Dr. Balendu
+                Shekher Giri</div>
+            <div class="md:hidden">
+                <!-- Hamburger Menu -->
+                <button id="hamburger-menu" class="text-gray-600">
+                    <i data-feather="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
             <!-- Desktop Navigation -->
             <div class="space-x-4 hidden md:flex">
                 <a href="#About" class="nav-link">About</a>
-                <a href="#WorkExperience" class="nav-link">Work Experience</a>
+                <a href="#WorkExperience" class="nav-link">Work
+                    Experience</a>
                 <a href="#Research" class="nav-link">Research</a>
                 <a href="#Publications" class="nav-link">Publications</a>
                 <a href="#Awards" class="nav-link">Achievements</a>
@@ -35,34 +46,8 @@
                     <i data-feather="moon"></i>
                 </button>
             </div>
-            <!-- Mobile Hamburger Menu -->
-            <div class="md:hidden flex items-center">
-                <!-- Hamburger Icon (Triple horizontal lines) -->
-                <button id="hamburger-menu" class="text-gray-600">
-                    <span class="block w-6 h-1 bg-gray-600 mb-1"></span>
-                    <span class="block w-6 h-1 bg-gray-600 mb-1"></span>
-                    <span class="block w-6 h-1 bg-gray-600"></span>
-                </button>
-            </div>
         </div>
-    </nav>
-
-    <body class="bg-gray-100 font-sans leading-normal tracking-normal">
-        <!-- Header/Hero Section -->
-        <header class="relative py-20" style="background: url('banner.jpg') center center/cover no-repeat;">
-            <div class="container mx-auto flex items-center justify-between">
-                <!-- Left Aligned Profile Image (Moved Slightly Right) -->
-                <img src="1.jpg" alt="Profile Picture" class="rounded-full w-48 h-48 object-cover ml-8">
-
-                <!-- Right Aligned Text (With Left Space) -->
-                <div class="text-right text-white pl-8">
-                    <h1 class="text-4xl font-bold mb-4">Dr. Balendu Shekher Giri</h1>
-                    <p id="header-subtitle" class="text-xl">Environmental Researcher | Sustainability Specialist</p>
-                </div>
-            </div>
-        </header>
-
-        <!-- Mobile Menu (Hidden on Larger Screens) -->
+        <!-- Mobile Menu -->
         <div id="mobile-menu" class="md:hidden flex flex-col items-center space-y-4 hidden">
             <a href="#About" class="nav-link">About</a>
             <a href="#WorkExperience" class="nav-link">Work Experience</a>
@@ -71,17 +56,35 @@
             <a href="#Awards" class="nav-link">Achievements</a>
             <a href="#Contact" class="nav-link">Contact</a>
         </div>
-    </body>
+    </nav>
+
+    <!-- Header/Hero Section -->
+    <header class="relative py-20" style="background: url('banner.jpg') center center/cover no-repeat;">
+        <div class="container mx-auto flex items-center justify-between">
+            <!-- Profile Image -->
+            <img src="1.jpg" alt="Profile Picture" class="rounded-full w-48 h-48 object-cover ml-8">
+
+            <!-- Right Aligned Text -->
+            <div class="text-right text-white pl-8">
+                <h1 class="text-4xl font-bold mb-4">Dr. Balendu Shekher
+                    Giri</h1>
+                <p id="header-subtitle" class="text-xl">(Sustainable Based
+                    Solution Lab)</p>
+            </div>
+        </div>
+    </header>
     <!-- About Section -->
     <section id="About" class="container mx-auto my-16 px-4">
         <div class="bg-white p-6 rounded-lg shadow-md">
             <!-- Centered Heading -->
-            <h2 class="text-3xl font-bold mb-8 text-gray-800 text-center">About Me</h2>
+            <h2 class="text-3xl font-bold mb-8 text-gray-800 text-center">About
+                Me</h2>
             <div class="grid md:grid-cols-1 gap-6">
                 <div>
                     <!-- Justified Text Alignment -->
                     <p class="text-gray-800 mb-4 text-justify">
-                        Dr. Balendu Shekher Giri has a master’s and PhD in Microbiology from the Barkatullah University
+                        Dr. Balendu Shekher Giri has a master’s and PhD in
+                        Microbiology from the Barkatullah University
                         Bhopal and CSIR NEERI Nagpur. He has done his
                         post-doctoral research at the University of Hawaii
                         at Manoa, USA, and Sejong University and Hanyang
@@ -112,21 +115,22 @@
                     </p>
                     <p class="text-gray-600 text-justify">
                         Currently affiliated with the Department of
-                        Sustainability at UPES Dehradun.
+                        Sustainablity at UPES Dehradun.
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
-
     <!-- Work Experience Section -->
     <section id="WorkExperience" class="bg-white py-16">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold mb-8 text-center">Work Experience</h2>
+            <h2 class="text-3xl font-bold mb-8 text-center">Work
+                Experience</h2>
             <div class="grid md:grid-cols-1 gap-6">
                 <div class="research-card bg-gray-100 p-6 rounded-lg shadow-md">
-                    <p class="text-gray-600 text-justify">My research career in various,
+                    <p class="text-gray-600 text-justify">My research career
+                        in various,
                         universities and institutions throughout the globe
                         was very interesting and welcoming with very high
                         output. For example, during my work tenure at CSIR
@@ -149,67 +153,726 @@
         </div>
     </section>
 
-    <!-- Research Section -->
     <section id="Research" class="bg-white py-16">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold mb-8 text-center">Current Research Projects</h2>
+            <h2 class="text-3xl font-bold mb-8 text-center">Research
+                Projects</h2>
             <div class="grid md:grid-cols-3 gap-6">
                 <div class="research-card bg-gray-100 p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold mb-4">Project 1</h3>
-                    <p class="text-gray-600">Description for project 1.</p>
+                    <h3 class="text-xl font-semibold mb-4">Development of
+                        prototype for production of potable water through
+                        solar desalination unit integrated with heat
+                        exchanger and water-based nanofluids </h3>
+                    <p>Funding Agencies: Council of Science and Technology, Uttar Pradesh</p>
+                    Period: February 2024- Ongoing </p>
+                    Role: Co-PI</p>
                 </div>
                 <div class="research-card bg-gray-100 p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold mb-4">Project 2</h3>
-                    <p class="text-gray-600">Description for project 2.</p>
+                    <h3 class="text-xl font-semibold mb-4">Biochar preparation using Himalayan lignocellulosic biomass
+                        and its application for wastewater treatment</h3>
+                    <p>Funding Agencies: SEED Grant, UPES Dehradun</p>
+                    Period: March 2023 – ongoing </p>
+                    Role: PI</p>
                 </div>
                 <div class="research-card bg-gray-100 p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold mb-4">Project 3</h3>
-                    <p class="text-gray-600">Description for project 3.</p>
+                    <h3 class="text-xl font-semibold mb-4">Removal of Benzene, Toluene, Ethylbenzene and Xylene (BTEX)
+                        using Adsorption and Bioremediation </h3>
+                    <p>Funding Agencies: SPARC, MHRD, GOI</p>
+                    Period: March 2019-2021 </p>
+                    Role: Post Doc Fellow</p>
                 </div>
+                <div class="research-card bg-gray-100 p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-4">Development of a hybrid system for pesticide removal from
+                        soil </h3>
+                    <p>Funding Agencies: IIT(BHU), Varanasi</p>
+                    Period: July 2018 -
+                    Dec 2019
+                    </p>
+                    Role: Co-PI</p>
+                </div>
+                <div class="research-card bg-gray-100 p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-4">Development of a hybrid system for the decolorization of
+                        dye-containing wastewater </h3>
+                    <p>Funding Agencies: IIT(BHU), Varanasi</p>
+                    Period: July 2017 -
+                    Dec 2018
+                    </p>
+                    Role: Co-PI</p>
+                </div>
+                <div class="research-card bg-gray-100 p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-4">Wastewater treatment (removal of color; pesticides; VOCs
+                        waste) using a hybrid bioreactor system (Electrolysis and Bioreactor system) </h3>
+                    <p>Funding Agencies: IIT(BHU), Varanasi</p>
+                    Period: July 2016-2019 </p>
+                    Role: Post Doc Fellow</p>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <button id="view-more-research" class="bg-blue-500 text-white px-4 py-2 rounded">View More</button>
+                <button id="view-less-research" class="bg-blue-500 text-white px-4 py-2 rounded hidden">View Less</button>
             </div>
         </div>
     </section>
 
     <!-- Publications Section -->
     <section id="Publications" class="container mx-auto my-16 px-4">
-        <h2 class="text-3xl font-bold mb-8 text-center">Recent Publications</h2>
+        <h2 class="text-3xl font-bold mb-8 text-center">Recent
+            Publications</h2>
         <div id="publication-filter" class="flex justify-center mb-8">
             <button data-filter="all"
                 class="filter-btn mx-2 px-4 py-2 bg-blue-500 text-white rounded active">All</button>
-            <button data-filter="Environmental" class="filter-btn mx-2 px-4 py-2 bg-blue-500 text-white rounded">
-                Environmental Science
+            <button data-filter="Research" class="filter-btn mx-2 px-4 py-2 bg-blue-500 text-white rounded">
+                Research Papers
             </button>
-            <button data-filter="Sustainability" class="filter-btn mx-2 px-4 py-2 bg-blue-500 text-white rounded">
-                Sustainability
+            <button data-filter="Book" class="filter-btn mx-2 px-4 py-2 bg-blue-500 text-white rounded">
+                Book Chapters
             </button>
             <button data-filter="Patents" class="filter-btn mx-2 px-4 py-2 bg-blue-500 text-white rounded">
                 Patents
             </button>
         </div>
         <div id="publications-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div class="publication-card bg-white p-6 rounded-lg shadow-md" data-category="Environmental">
-                <h3 class="text-xl font-semibold mb-2">Publication 1</h3>
-                <p class="text-gray-600 mb-4">Journal 1, 2023</p>
-                <a href="#" class="text-blue-600 hover:underline">View Publication</a>
+            <!-- 2024 Publications -->
+            <div class="publication-card bg-white p-6 rounded-lg shadow-md" data-category="Research">
+                <h3 class="text-xl font-semibold mb-2">Enhancement of solar
+                    still performance using various phase change materials:
+                    A critical review</h3>
+                <p class="text-gray-600 mb-4">Journal of the Taiwan
+                    Institute of Chemical Engineers, 2024</p>
+                <a href="#" class="text-blue-600 hover:underline">View
+                    Publication</a>
             </div>
-            <div class="publication-card bg-white p-6 rounded-lg shadow-md" data-category="Sustainability">
-                <h3 class="text-xl font-semibold mb-2">Publication 2</h3>
-                <p class="text-gray-600 mb-4">Journal 2, 2022</p>
-                <a href="#" class="text-blue-600 hover:underline">View Publication</a>
+            <div class="publication-card bg-white p-6 rounded-lg shadow-md" data-category="Research">
+                <h3 class="text-xl font-semibold mb-2">Performance analysis
+                    of modified solar still with parabolic reflector and
+                    nanofluids</h3>
+                <p class="text-gray-600 mb-4">Journal of the Taiwan
+                    Institute of Chemical Engineers, 2024</p>
+                <a href="#" class="text-blue-600 hover:underline">View
+                    Publication</a>
             </div>
-            <div class="publication-card bg-white p-6 rounded-lg shadow-md" data-category="Sustainability">
-                <h3 class="text-xl font-semibold mb-2">Publication 3</h3>
-                <p class="text-gray-600 mb-4">Conference 1, 2021</p>
-                <a href="#" class="text-blue-600 hover:underline">View Publication</a>
+            <div class="publication-card bg-white p-6 rounded-lg shadow-md" data-category="Research">
+                <h3 class="text-xl font-semibold mb-2">Optimizing crop
+                    quality and yield: Assessing the impact of integrated
+                    potassium management on Chinese Cabbage (Brassica rapa
+                    L. subsp. chinensis)</h3>
+                <p class="text-gray-600 mb-4">Heliyon e36208, 2024</p>
+                <a href="#" class="text-blue-600 hover:underline">View
+                    Publication</a>
+            </div>
+            <div class="publication-card bg-white p-6 rounded-lg shadow-md" data-category="Research">
+                <h3 class="text-xl font-semibold mb-2">Natural wax recovery
+                    from Musa Acuminata biomass using organic solvents</h3>
+                <p class="text-gray-600 mb-4">Chemosphere 363, 142919,
+                    2024</p>
+                <a href="#" class="text-blue-600 hover:underline">View
+                    Publication</a>
+            </div>
+            <div class="publication-card bg-white p-6 rounded-lg shadow-md" data-category="Research">
+                <h3 class="text-xl font-semibold mb-2">Barriers to
+                    sustainable biowaste-to-energy solutions: An analytical
+                    hierarchy process based methodical analysis</h3>
+                <p class="text-gray-600 mb-4">Biomass Conversion and
+                    Biorefinery, 2024</p>
+                <a href="#" class="text-blue-600 hover:underline">View
+                    Publication</a>
+            </div>
+            <div class="publication-card bg-white p-6 rounded-lg shadow-md" data-category="Research">
+                <h3 class="text-xl font-semibold mb-2">Assessing and
+                    optimizing the bioactivities of diverse enzyme-derived
+                    protein hydrolysates from Porphyra yezoensis: unlocking
+                    the health potential</h3>
+                <p class="text-gray-600 mb-4">Journal of Food Science and
+                    Technology, 1-11, 2024</p>
+                <a href="#" class="text-blue-600 hover:underline">View
+                    Publication</a>
+            </div>
+            <div class="publication-card bg-white p-6 rounded-lg shadow-md" data-category="Research">
+                <h3 class="text-xl font-semibold mb-2">Graphene-based
+                    functional electrochemical sensors for the detection of
+                    chlorpyrifos in water and food samples: A review</h3>
+                <p class="text-gray-600 mb-4">Journal of Food Science and
+                    Technology 61 (4), 631-641, 2024</p>
+                <a href="#" class="text-blue-600 hover:underline">View
+                    Publication</a>
+            </div>
+            <div class="publication-card bg-white p-6 rounded-lg shadow-md" data-category="Research">
+                <h3 class="text-xl font-semibold mb-2">Bioprospecting marine
+                    microalgae as sustainable bio-factories for value-added
+                    compounds</h3>
+                <p class="text-gray-600 mb-4">Algal Research 79, 103444,
+                    2024</p>
+                <a href="#" class="text-blue-600 hover:underline">View
+                    Publication</a>
+            </div>
+            <div class="publication-card bg-white p-6 rounded-lg shadow-md" data-category="Research">
+                <h3 class="text-xl font-semibold mb-2">Potable water
+                    production through low-cost single chamber solar still
+                    in north India</h3>
+                <p class="text-gray-600 mb-4">Environmental Science and
+                    Pollution Research, 2024</p>
+                <a href="#" class="text-blue-600 hover:underline">View
+                    Publication</a>
+            </div>
+            <div class="publication-card bg-white p-6 rounded-lg shadow-md" data-category="Research">
+                <h3 class="text-xl font-semibold mb-2">Unlocking growth
+                    potential: Synergistic potassium fertilization for
+                    enhanced yield, nutrient uptake, and energy fractions in
+                    Chinese cabbage</h3>
+                <p class="text-gray-600 mb-4">Heliyon 10 (7), 2024</p>
+                <a href="#" class="text-blue-600 hover:underline">View
+                    Publication</a>
+            </div>
+            <div class="publication-card bg-white p-6 rounded-lg shadow-md" data-category="Research">
+                <h3 class="text-xl font-semibold mb-2">Strategies for
+                    biological treatment of waste water: A critical
+                    review</h3>
+                <p class="text-gray-600 mb-4">Journal of Cleaner Production,
+                    142266, 2024</p>
+                <a href="#" class="text-blue-600 hover:underline">View
+                    Publication</a>
+            </div>
+            <div class="publication-card bg-white p-6 rounded-lg shadow-md" data-category="Research">
+                <h3 class="text-xl font-semibold mb-2">Microalgae derived
+                    honeycomb structured mesoporous diatom biosilica for
+                    adsorption of malachite green: Process optimization and
+                    modeling</h3>
+                <p class="text-gray-600 mb-4">Chemosphere 355, 2024</p>
+                <a href="#" class="text-blue-600 hover:underline">View
+                    Publication</a>
+            </div>
+            <div class="publication-card bg-white p-6 rounded-lg shadow-md" data-category="Research">
+                <h3 class="text-xl font-semibold mb-2">Computational study
+                    of the performance of a solar dryer for improvement in
+                    the shelf life of the food materials</h3>
+                <p class="text-gray-600 mb-4">Environmental Science and
+                    Pollution Research, 2024</p>
+                <a href="#" class="text-blue-600 hover:underline">View
+                    Publication</a>
+            </div>
+            <div class="publication-card bg-white p-6 rounded-lg shadow-md" data-category="Research">
+                <h3 class="text-xl font-semibold mb-2">Application and
+                    Functional Properties of Millet Starch: Wet Milling
+                    Extraction Process and Different Modification
+                    Approaches</h3>
+                <p class="text-gray-600 mb-4">Heliyon 10, 2024, e25330</p>
+                <a href="#" class="text-blue-600 hover:underline">View
+                    Publication</a>
+            </div>
+            <div class="publication-card bg-white p-6 rounded-lg shadow-md" data-category="Research">
+                <h3 class="text-xl font-semibold mb-2">Sustainable pathways
+                    for solar desalination using nanofluids: A critical
+                    review</h3>
+                <p class="text-gray-600 mb-4">Environmental Research 241,
+                    117654, 2024</p>
+                <a href="#" class="text-blue-600 hover:underline">View
+                    Publication</a>
+            </div>
+            <div class="publication-card bg-white p-6 rounded-lg shadow-md" data-category="Research">
+                <h3 class="text-xl font-semibold mb-2">A critical review on
+                    CO2 sequestration using construction and demolition
+                    waste: Future scope and perspective</h3>
+                <p class="text-gray-600 mb-4">Environmental Engineering
+                    Research 29 (3), 230256, 2024</p>
+                <a href="#" class="text-blue-600 hover:underline">View
+                    Publication</a>
+            </div>
+            <!-- 2023 Publications -->
+            <div class="publication-card bg-white p-6 rounded-lg shadow-md" data-category="Research">
+                <h3 class="text-xl font-semibold mb-2">Nanoparticles Based
+                    Nanosensors: Principles and their Applications in Active
+                    Packaging for Food Quality and Safety Detection</h3>
+                <p class="text-gray-600 mb-4">Biochemical Engineering
+                    Journal 193, 108861, 2023</p>
+                <a href="#" class="text-blue-600 hover:underline">View
+                    Publication</a>
+            </div>
+            <div class="publication-card bg-white p-6 rounded-lg shadow-md" data-category="Research">
+                <h3 class="text-xl font-semibold mb-2">Synthesis and
+                    performance evaluation of Beta vulgaris based
+                    dye-sensitized organic solar cell</h3>
+                <p class="text-gray-600 mb-4">Environmental Technology &
+                    Innovation 31, 103220, 2023</p>
+                <a href="#" class="text-blue-600 hover:underline">View
+                    Publication</a>
+            </div>
+            <div class="publication-card bg-white p-6 rounded-lg shadow-md" data-category="Research">
+                <h3 class="text-xl font-semibold mb-2">Drying kinetics,
+                    thermal and morphological analysis of starchy food
+                    material: Experimental investigation through an induced
+                    type solar dryer</h3>
+                <p class="text-gray-600 mb-4">Environmental Technology &
+                    Innovation 31, 103221, 2023</p>
+                <a href="#" class="text-blue-600 hover:underline">View
+                    Publication</a>
+            </div>
+            <div class="publication-card bg-white p-6 rounded-lg shadow-md" data-category="Research">
+                <h3 class="text-xl font-semibold mb-2">A critical review on
+                    CO2 sequestration using construction and demolition
+                    waste: Future scope and perspective</h3>
+                <p class="text-gray-600 mb-4">Environmental Engineering
+                    Research, 2023</p>
+                <a href="#" class="text-blue-600 hover:underline">View
+                    Publication</a>
+            </div>
+            <div class="publication-card bg-white p-6 rounded-lg shadow-md" data-category="Research">
+                <h3 class="text-xl font-semibold mb-2">Thermal and
+                    mechanical investigation of chemically treated hybrid
+                    biomass epoxy bio-composite: An approach of pyrolysis
+                    kinetics</h3>
+                <p class="text-gray-600 mb-4">Bioresource Technology
+                    Reports, 23, September 2023, 101589</p>
+                <a href="#" class="text-blue-600 hover:underline">View
+                    Publication</a>
+            </div>
+            <div class="publication-card bg-white p-6 rounded-lg shadow-md" data-category="Research">
+                <h3 class="text-xl font-semibold mb-2">Determination of
+                    thermal degradation behavior and kinetics parameters of
+                    chemically modified sun hemp biomass</h3>
+                <p class="text-gray-600 mb-4">Bioresource Technology Volume
+                    380, July 2023, 129065</p>
+                <a href="#" class="text-blue-600 hover:underline">View
+                    Publication</a>
+            </div>
+            <div class="publication-card bg-white p-6 rounded-lg shadow-md" data-category="Research">
+                <h3 class="text-xl font-semibold mb-2">Sustainability issues
+                    of solar desalination hybrid systems integrated with
+                    heat exchangers for the production of drinking water: A
+                    review</h3>
+                <p class="text-gray-600 mb-4">Desalination, Volume 566,
+                    116930, 2023</p>
+                <a href="#" class="text-blue-600 hover:underline">View
+                    Publication</a>
+            </div>
+            <!-- 2022 Publications -->
+            <div class="publication-card bg-white p-6 rounded-lg shadow-md" data-category="Research">
+                <h3 class="text-xl font-semibold mb-2">Barriers in biogas
+                    production from the organic fraction of municipal solid
+                    waste: A circular bio economy perspective</h3>
+                <p class="text-gray-600 mb-4">Bioresource Technology, Volume
+                    362, 127671, 2022</p>
+                <a href="#" class="text-blue-600 hover:underline">View
+                    Publication</a>
+            </div>
+            <div class="publication-card bg-white p-6 rounded-lg shadow-md" data-category="Research">
+                <h3 class="text-xl font-semibold mb-2">A critical review on
+                    Biochar-based catalysts for the abatement of toxic
+                    pollutants from water via Advanced Oxidation Processes
+                    (AOPs)</h3>
+                <p class="text-gray-600 mb-4">Science of the Total
+                    Environment, Volume 849, 25 157831, 2022</p>
+                <a href="#" class="text-blue-600 hover:underline">View
+                    Publication</a>
+            </div>
+            <div class="publication-card bg-white p-6 rounded-lg shadow-md" data-category="Research">
+                <h3 class="text-xl font-semibold mb-2">An analytical
+                    hierarchy process-based decision support system for the
+                    selection of biogas up-gradation technologies</h3>
+                <p class="text-gray-600 mb-4">Chemosphere 302, 134741,
+                    2022</p>
+                <a href="#" class="text-blue-600 hover:underline">View
+                    Publication</a>
+            </div>
+            <div class="publication-card bg-white p-6 rounded-lg shadow-md" data-category="Research">
+                <h3 class="text-xl font-semibold mb-2">Sustainable rural
+                    waste management using biogas technology: An analytical
+                    hierarchy process decision framework</h3>
+                <p class="text-gray-600 mb-4">Chemosphere 301, 134737,
+                    2022</p>
+                <a href="#" class="text-blue-600 hover:underline">View
+                    Publication</a>
+            </div>
+            <div class="publication-card bg-white p-6 rounded-lg shadow-md" data-category="Research">
+                <h3 class="text-xl font-semibold mb-2">Highly efficient
+                    bio-adsorption of Malachite green using Chinese Fan-Palm
+                    Biochar (Livistona chinensis)</h3>
+                <p class="text-gray-600 mb-4">Chemosphere 287 (Part 3),
+                    132282, 2022</p>
+                <a href="#" class="text-blue-600 hover:underline">View
+                    Publication</a>
+            </div>
+            <!-- 2021 Publications -->
+            <div class="publication-card bg-white p-6 rounded-lg shadow-md" data-category="Research">
+                <h3 class="text-xl font-semibold mb-2">Lignocellulosic
+                    biomass-based engineered biochar composites: A facile
+                    strategy for abatement of emerging pollutants and
+                    utilization in industrial applications</h3>
+                <p class="text-gray-600 mb-4">Renewable and Sustainable
+                    Energy Reviews 152, 111643, 2021</p>
+                <a href="#" class="text-blue-600 hover:underline">View
+                    Publication</a>
+            </div>
+            <div class="publication-card bg-white p-6 rounded-lg shadow-md" data-category="Research">
+                <h3 class="text-xl font-semibold mb-2">Construction of
+                    integrated system for the treatment of Acid orange 7 dye
+                    from wastewater: Optimization and growth kinetic
+                    study</h3>
+                <p class="text-gray-600 mb-4">Bioresource Technology 337,
+                    125478, 2021</p>
+                <a href="#" class="text-blue-600 hover:underline">View
+                    Publication</a>
+            </div>
+            <div class="publication-card bg-white p-6 rounded-lg shadow-md" data-category="Research">
+                <h3 class="text-xl font-semibold mb-2">Progress in
+                    bioremediation of pesticide residues in the
+                    environment</h3>
+                <p class="text-gray-600 mb-4">Environmental Engineering
+                    Research 26 (6), 77-100, 2021</p>
+                <a href="#" class="text-blue-600 hover:underline">View
+                    Publication</a>
+            </div>
+            <div class="publication-card bg-white p-6 rounded-lg shadow-md" data-category="Research">
+                <h3 class="text-xl font-semibold mb-2">Bio-composite of
+                    Fe-sludge biochar immobilized with Bacillus Sp. in
+                    packed column for bio-adsorption of Methylene blue in a
+                    hybrid treatment system: Isotherm and kinetic
+                    evaluation</h3>
+                <p class="text-gray-600 mb-4">Environmental Technology &
+                    Innovation 23, 101734, 2021</p>
+                <a href="#" class="text-blue-600 hover:underline">View
+                    Publication</a>
+            </div>
+            <div class="publication-card bg-white p-6 rounded-lg shadow-md" data-category="Research">
+                <h3 class="text-xl font-semibold mb-2">Construction of
+                    platforms for biological treatment of aromatic
+                    hydrocarbons and their future perspectives</h3>
+                <p class="text-gray-600 mb-4">Journal of Hazardous Materials
+                    416, 2021</p>
+                <a href="#" class="text-blue-600 hover:underline">View
+                    Publication</a>
+            </div>
+            <div class="publication-card bg-white p-6 rounded-lg shadow-md" data-category="Research">
+                <h3 class="text-xl font-semibold mb-2">Analysis of natural
+                    wax from Nelumbo nucifera leaves by using polar and
+                    non-polar organic solvents</h3>
+                <p class="text-gray-600 mb-4">Process Biochemistry 106 (20),
+                    96-102, 2021</p>
+                <a href="#" class="text-blue-600 hover:underline">View
+                    Publication</a>
+            </div>
+            <div class="publication-card bg-white p-6 rounded-lg shadow-md" data-category="Research">
+                <h3 class="text-xl font-semibold mb-2">Biochar for
+                    remediation of agrochemicals and synthetic organic dyes
+                    from environmental samples: a review</h3>
+                <p class="text-gray-600 mb-4">Chemosphere 272, 12991,
+                    2021</p>
+                <a href="#" class="text-blue-600 hover:underline">View
+                    Publication</a>
+            </div>
+            <div class="publication-card bg-white p-6 rounded-lg shadow-md" data-category="Research">
+                <h3 class="text-xl font-semibold mb-2">Resource recovery and
+                    biorefinery potential of apple orchard waste in the
+                    circular bioeconomy</h3>
+                <p class="text-gray-600 mb-4">Bioresource Technology,
+                    2021</p>
+                <a href="#" class="text-blue-600 hover:underline">View
+                    Publication</a>
+            </div>
+            <div class="publication-card bg-white p-6 rounded-lg shadow-md" data-category="Research">
+                <h3 class="text-xl font-semibold mb-2">An analysis on
+                    generic barriers to bioenergy technologies adoption in
+                    context of rural India</h3>
+                <p class="text-gray-600 mb-4">Bioresource Technology Reports
+                    14, 100671, 2021</p>
+                <a href="#" class="text-blue-600 hover:underline">View
+                    Publication</a>
+            </div>
+            <!-- 2020 Publications -->
+            <div class="publication-card bg-white p-6 rounded-lg shadow-md" data-category="Research">
+                <h3 class="text-xl font-semibold mb-2">Sequestration of
+                    simulated carbon dioxide (CO2) using churning
+                    cementations waste and fly-ash in a thermo-stable batch
+                    reactor (TSBR)</h3>
+                <p class="text-gray-600 mb-4">Environmental Science and
+                    Pollution Research, 2020</p>
+                <a href="#" class="text-blue-600 hover:underline">View
+                    Publication</a>
+            </div>
+            <!-- 2019 Publications -->
+            <div class="publication-card bg-white p-6 rounded-lg shadow-md" data-category="Research">
+                <h3 class="text-xl font-semibold mb-2">Biodegradation of
+                    methylene blue dye in a batch and continuous mode using
+                    biochar as packing media</h3>
+                <p class="text-gray-600 mb-4">Environmental Research, 171,
+                    356–364, 2019</p>
+                <a href="#" class="text-blue-600 hover:underline">View
+                    Publication</a>
+            </div>
+            <div class="publication-card bg-white p-6 rounded-lg shadow-md" data-category="Research">
+                <h3 class="text-xl font-semibold mb-2">Indoor potted plant
+                    based biofilter: performance evaluation and kinetics
+                    study</h3>
+                <p class="text-gray-600 mb-4">Indian Journal of Experimental
+                    Biology, 2019</p>
+                <a href="#" class="text-blue-600 hover:underline">View
+                    Publication</a>
+            </div>
+            <div class="publication-card bg-white p-6 rounded-lg shadow-md" data-category="Research">
+                <h3 class="text-xl font-semibold mb-2">Performance of a
+                    biofilter with compost and activated carbon-based
+                    packing material for gas-phase toluene removal</h3>
+                <p class="text-gray-600 mb-4">Bioresource Technology, Volume
+                    285, 121317, 2019</p>
+                <a href="#" class="text-blue-600 hover:underline">View
+                    Publication</a>
+            </div>
+            <!-- 2018 Publications -->
+            <div class="publication-card bg-white p-6 rounded-lg shadow-md" data-category="Research">
+                <h3 class="text-xl font-semibold mb-2">Adsorption of
+                    hexavalent chromium from aqueous solution by activated
+                    carbon prepared from almond shell: Kinetics, equilibrium
+                    and thermodynamics study </h3>
+                <p class="text-gray-600 mb-4">Journal of Water Supply:
+                    Research and Technology-Aqua,
+                    2018</p>
+                <a href="#" class="text-blue-600 hover:underline">View
+                    Publication</a>
+            </div>
+            <div class="publication-card bg-white p-6 rounded-lg shadow-md" data-category="Research">
+                <h3 class="text-xl font-semibold mb-2">Biodegradation of
+                    toluene vapor by evaporative cooler model based
+                    biofilter </h3>
+                <p class="text-gray-600 mb-4">Analytical Science &
+                    Technology ,
+                    2018</p>
+                <a href="#" class="text-blue-600 hover:underline">View
+                    Publication</a>
+            </div>
+            <div class="publication-card bg-white p-6 rounded-lg shadow-md" data-category="Research">
+                <h3 class="text-xl font-semibold mb-2">Bioremediation of
+                    Congo red dye in immobilized batch and continuous packed
+                    bed bioreactor by Brevibacillus parabrevis using coconut
+                    shell biochar </h3>
+                <p class="text-gray-600 mb-4">Bioresource Technology 252,
+                    37-43 ,
+                    2018</p>
+                <a href="#" class="text-blue-600 hover:underline">View
+                    Publication</a>
+            </div>
+            <div class="publication-card bg-white p-6 rounded-lg shadow-md" data-category="Research">
+                <h3 class="text-xl font-semibold mb-2">Recent advancements
+                    in bioremediation of dye: Current status and
+                    challenges</h3>
+                <p class="text-gray-600 mb-4">Bioresource Technology 253,
+                    355-367, 2018</p>
+                <a href="#" class="text-blue-600 hover:underline">View
+                    Publication</a>
+            </div>
+            <div class="publication-card bg-white p-6 rounded-lg shadow-md" data-category="Research">
+                <h3 class="text-xl font-semibold mb-2">Removal of Patent
+                    Blue (V) dye using Indian Bael Shell Biochar:
+                    Characterization, application and kinetic studies</h3>
+                <p class="text-gray-600 mb-4">Sustainability, 10(8), 2669,
+                    2018</p>
+                <a href="#" class="text-blue-600 hover:underline">View
+                    Publication</a>
+            </div>
+            <!-- 2017 Publications -->
+            <div class="publication-card bg-white p-6 rounded-lg shadow-md" data-category="Research">
+                <h3 class="text-xl font-semibold mb-2">Review on Application
+                    of Agro-Waste Biomass Biochar for Adsorption and
+                    Bioremediation Dye</h3>
+                <p class="text-gray-600 mb-4">Biomedical Journal of
+                    Scientific & Technical Research, 2017</p>
+                <a href="#" class="text-blue-600 hover:underline">View
+                    Publication</a>
+            </div>
+            <div class="publication-card bg-white p-6 rounded-lg shadow-md" data-category="Research">
+                <h3 class="text-xl font-semibold mb-2">Removal of hydrogen
+                    sulfide generated during anaerobic treatment of
+                    sulfate-laden wastewater using biochar: Evaluation of
+                    efficiency and mechanisms</h3>
+                <p class="text-gray-600 mb-4">Bioresource Technology, 234,
+                    115-121, 2017</p>
+                <a href="#" class="text-blue-600 hover:underline">View
+                    Publication</a>
+            </div>
+            <div class="publication-card bg-white p-6 rounded-lg shadow-md" data-category="Research">
+                <h3 class="text-xl font-semibold mb-2">Biodegradation of
+                    reactive orange 16 by dye in packed bed bioreactor using
+                    seeds of Ashoka and Casuarina as packing media</h3>
+                <p class="text-gray-600 mb-4">Indian Journal of
+                    Biotechnology, 16(2), 216-221, 2017</p>
+                <a href="#" class="text-blue-600 hover:underline">View
+                    Publication</a>
+            </div>
+            <div class="publication-card bg-white p-6 rounded-lg shadow-md" data-category="Research">
+                <h3 class="text-xl font-semibold mb-2">Bio-filters for the
+                    treatment of VOCs and odors – A review</h3>
+                <p class="text-gray-600 mb-4">Asian Journal of Atmospheric
+                    Environment, 2017</p>
+                <a href="#" class="text-blue-600 hover:underline">View
+                    Publication</a>
+            </div>
+            <!-- 2015 Publications -->
+            <div class="publication-card bg-white p-6 rounded-lg shadow-md" data-category="Research">
+                <h3 class="text-xl font-semibold mb-2">Kinetics and
+                    biofiltration of dimethyl sulfide emitted from P&P
+                    Industry</h3>
+                <p class="text-gray-600 mb-4">Biochemical Engineering
+                    Journal, 2015</p>
+                <a href="#" class="text-blue-600 hover:underline">View
+                    Publication</a>
+            </div>
+            <!-- 2014 Publications -->
+            <div class="publication-card bg-white p-6 rounded-lg shadow-md" data-category="Research">
+                <h3 class="text-xl font-semibold mb-2">Review of
+                    biotreatment techniques for volatile sulfur compounds
+                    with an emphasis on dimethyl sulfide</h3>
+                <p class="text-gray-600 mb-4">Process Biochemistry, 2014</p>
+                <a href="#" class="text-blue-600 hover:underline">View
+                    Publication</a>
+            </div>
+            <!-- 2013 Publications -->
+            <div class="publication-card bg-white p-6 rounded-lg shadow-md" data-category="Research">
+                <h3 class="text-xl font-semibold mb-2">Biological treatment
+                    of gaseous emissions containing dimethyl Sulphide
+                    generated from pulp and paper industry</h3>
+                <p class="text-gray-600 mb-4">Bioresource Technology 142,
+                    420-427, 2013</p>
+                <a href="#" class="text-blue-600 hover:underline">View
+                    Publication</a>
+            </div>
+            <div class="publication-card bg-white p-6 rounded-lg shadow-md" data-category="Research">
+                <h3 class="text-xl font-semibold mb-2">Treatment of waste
+                    gas containing low concentration of dimethyl Sulphide
+                    (DMS) in a high-performance bio trickling filter</h3>
+                <p class="text-gray-600 mb-4">Indian Journal of Experimental
+                    Biology, 2013</p>
+                <a href="#" class="text-blue-600 hover:underline">View
+                    Publication</a>
+            </div>
+            <!-- 2012 Publications -->
+            <div class="publication-card bg-white p-6 rounded-lg shadow-md" data-category="Research">
+                <h3 class="text-xl font-semibold mb-2">Isolation and
+                    characterization of Dimethyl Sulfide (DMS)-degrading
+                    bacteria from soil and biofilter treating waste gas
+                    containing DMS from the laboratory and pulp and paper
+                    industry</h3>
+                <p class="text-gray-600 mb-4">Applied Biochemistry &
+                    Biotechnology 167 (6), 1744-1752, 2012</p>
+                <a href="#" class="text-blue-600 hover:underline">View
+                    Publication</a>
+            </div>
+            <!-- 2010 Publications -->
+            <div class="publication-card bg-white p-6 rounded-lg shadow-md" data-category="Research">
+                <h3 class="text-xl font-semibold mb-2">Treatment of waste
+                    gas containing low concentration of dimethyl sulphide
+                    (DMS) in a bench-scale biofilter</h3>
+                <p class="text-gray-600 mb-4">Bioresource Technology,
+                    2010</p>
+                <a href="#" class="text-blue-600 hover:underline">View
+                    Publication</a>
+            </div>
+            <!-- Book Chapters -->
+            <div class="publication-card bg-white p-6 rounded-lg shadow-md" data-category="Book">
+                <h3 class="text-xl font-semibold mb-2">The Handbook of
+                    Environmental Chemistry. Springer, Berlin,
+                    Heidelberg</h3>
+                <p class="text-gray-600 mb-4">Crucial Effects of COVID-19 on
+                    Antimicrobial Resistance, 2023</p>
+                <a href="#" class="text-blue-600 hover:underline">View
+                    Publication</a>
+            </div>
+            <div class="publication-card bg-white p-6 rounded-lg shadow-md" data-category="Book">
+                <h3 class="text-xl font-semibold mb-2">Giannakoudakis -
+                    Novel Materials for Environmental Remediation
+                    Applications. Editor Dimitrios A. Giannakoudakis</h3>
+                <p class="text-gray-600 mb-4">Chapter 16: CO2 removal using
+                    construction and demolition waste as a solid adsorbent:
+                    Challenges and forthcoming directions, Page 399-411,
+                    2023</p>
+                <a href="#" class="text-blue-600 hover:underline">View
+                    Publication</a>
+            </div>
+            <div class="publication-card bg-white p-6 rounded-lg shadow-md" data-category="Book">
+                <h3 class="text-xl font-semibold mb-2">Pandey - Current
+                    Developments in Biotechnology and Bioengineering -
+                    Advances in Phytoremediation Technology; Editors: Ashok
+                    Pandey</h3>
+                <p class="text-gray-600 mb-4">Chapter 10: Phytoremediation
+                    of dyes wastewater,
+                    2022</p>
+                <a href="#" class="text-blue-600 hover:underline">View
+                    Publication</a>
+            </div>
+            <div class="publication-card bg-white p-6 rounded-lg shadow-md" data-category="Book">
+                <h3 class="text-xl font-semibold mb-2">“Weed Biomass and its
+                    Management”, Springer Publication </h3>
+                <p class="text-gray-600 mb-4">Ecological and environmental
+                    aspects of aquatic weeds and their growing
+                    biotechnological prospects,
+                    2020</p>
+                <a href="#" class="text-blue-600 hover:underline">View
+                    Publication</a>
+            </div>
+            <div class="publication-card bg-white p-6 rounded-lg shadow-md" data-category="Book">
+                <h3 class="text-xl font-semibold mb-2">“Biochar Applications
+                    in Agriculture and Environment Management”.
+                    Springer Publications </h3>
+                <p class="text-gray-600 mb-4">The Potential Application of
+                    Biochars for Dyes with an Emphasis on Azo Dyes: Analysis
+                    Through an Experimental Case Study Utilizing
+                    Fruit-Derived Biochar for the Abatement of Congo Red as
+                    the Model Pollutant, pp 53-76,
+                    2020</p>
+                <a href="#" class="text-blue-600 hover:underline">View
+                    Publication</a>
+            </div>
+            <div class="publication-card bg-white p-6 rounded-lg shadow-md" data-category="Book">
+                <h3 class="text-xl font-semibold mb-2">“Current Developments
+                    in Biotechnology and Bioengineering”, Elsevier
+                    publication </h3>
+                <p class="text-gray-600 mb-4">Anaerobic
+                    bioreactors/digesters: design and development, pp
+                    261-279,
+                    2017</p>
+                <a href="#" class="text-blue-600 hover:underline">View
+                    Publication</a>
+            </div>
+            <div class="publication-card bg-white p-6 rounded-lg shadow-md" data-category="Book">
+                <h3 class="text-xl font-semibold mb-2">“Industrial Bio
+                    refineries& White Biotechnology”, Elsevier Publication
+                </h3>
+                <p class="text-gray-600 mb-4">Industrial enzymes, pp
+                    473-497,
+                    2015</p>
+                <a href="#" class="text-blue-600 hover:underline">View
+                    Publication</a>
+            </div>
+            <!-- Patents -->
+            <div class="publication-card bg-white p-6 rounded-lg shadow-md" data-category="Patents">
+                <h3 class="text-xl font-semibold mb-2">Induced-type solar
+                    dryer system to enhance shelf life of foods and its
+                    working method thereof</h3>
+                <p class="text-gray-600 mb-4">Patent Application Number:
+                    202411009031 A</p>
+                <a href="#" class="text-blue-600 hover:underline">View
+                    Patent</a>
             </div>
             <div class="publication-card bg-white p-6 rounded-lg shadow-md" data-category="Patents">
-                <h3 class="text-xl font-semibold mb-2">Innovative Method for Biogas Production and H2S Removal</h3>
-                <p class="text-gray-600 mb-4">Patent Number: US 12345678 B1</p>
-                <a href="#" class="text-blue-600 hover:underline">View Patent</a>
+                <h3 class="text-xl font-semibold mb-2">Hybrid solar still
+                    with waste heat recover</h3>
+                <p class="text-gray-600 mb-4">Patent Application Number:
+                    202411057300 </p>
+                <a href="#" class="text-blue-600 hover:underline">View
+                    Patent</a>
             </div>
-        </div>
+            <div class="publication-card bg-white p-6 rounded-lg shadow-md" data-category="Patents">
+                <h3 class="text-xl font-semibold mb-2">Hybrid type TSM and
+                    polycarbonate wall-based solar dryer system for food
+                    preservation and method thereof</h3>
+                <p class="text-gray-600 mb-4">Patent Application Number:
+                    202411057301 </p>
+                <a href="#" class="text-blue-600 hover:underline">View
+                    Patent</a>
+            </div>
+            <div class="text-center mt-4">
+                <button id="view-more-publications" class="bg-blue-500 text-white px-4 py-2 rounded">View More</button>
+                <button id="view-less-publications" class="bg-blue-500 text-white px-4 py-2 rounded hidden">View Less</button>
+            </div>                        
+        </div>        
     </section>
-
 
     <!-- Awards Section -->
     <section id="Awards" class="bg-white py-4">
@@ -219,31 +882,49 @@
                 <h3 class="text-xl font-semibold mb-2">Honors/Awards/Fellowship</h3>
                 <div class="research-card bg-gray-100 p-6 rounded-lg shadow-md">
                     <p class="text-gray-600 text-justify">
-                        <li>Post Doctorate Fellowship at IIT Guwahati, Assam, (October 2020-December 2022)</li>
-                        <li>Post Doctorate Fellowship at CSIR IITR, Lucknow, Uttar Pradesh (September 2019 - September
+                        <li>Post Doctorate Fellowship at IIT Guwahati,
+                            Assam, (October 2020-December 2022)</li>
+                        <li>Post Doctorate Fellowship at CSIR IITR, Lucknow,
+                            Uttar Pradesh (September 2019 - September
                             2020)</li>
-                        <li>The Scheme for Promotion of Academic and Research Collaboration (SPARC) fellowship for the
-                            travel support grant for collaborating research work at Hanyang University, Seoul, South
+                        <li>The Scheme for Promotion of Academic and
+                            Research Collaboration (SPARC) fellowship for
+                            the
+                            travel support grant for collaborating research
+                            work at Hanyang University, Seoul, South
                             Korea</li>
-                        <li>Awarded international travel support grant for the oral presentation in an international
-                            conference at Kunming, China during November 11-15, 2017</li>
-                        <li>Post-doctoral fellowship, IIT (BHU), Varanasi, UP (July 2016 - July 2019)</li>
-                        <li>Post-doctoral fellowship, University of Hawaii at Manoa, USA (March 2015 - March 2016)</li>
-                        <li>Post-doctoral fellowship, Sejong and Hanyang University, Seoul, South Korea (2013 - 2014)
+                        <li>Awarded international travel support grant for
+                            the oral presentation in an international
+                            conference at Kunming, China during November
+                            11-15, 2017</li>
+                        <li>Post-doctoral fellowship, IIT (BHU), Varanasi,
+                            UP (July 2016 - July 2019)</li>
+                        <li>Post-doctoral fellowship, University of Hawaii
+                            at Manoa, USA (March 2015 - March 2016)</li>
+                        <li>Post-doctoral fellowship, Sejong and Hanyang
+                            University, Seoul, South Korea (2013 - 2014)
                         </li>
-                        <li>Sr. Research Fellowship, CSIR, New Delhi (2010 - 2013)</li>
-                        <li>Awarded “Third prize” in a group work titled by the 8th Technology Leadership
-                            Entrepreneurship Program – Council of Scientific and Industrial Research (8th TLEP-CSIR),
-                            Ministry of Science & Technology, India supported by IIM Bangalore (July 2011)</li>
+                        <li>Sr. Research Fellowship, CSIR, New Delhi (2010 -
+                            2013)</li>
+                        <li>Awarded “Third prize” in a group work titled by
+                            the 8th Technology Leadership
+                            Entrepreneurship Program – Council of Scientific
+                            and Industrial Research (8th TLEP-CSIR),
+                            Ministry of Science & Technology, India
+                            supported by IIM Bangalore (July 2011)</li>
                     </p>
                 </div>
                 <div class="grid md:grid-cols-1 gap-5"></div>
-                <h3 class="text-xl font-semibold mb-2">Membership of Professional Societies -</h3>
+                <h3 class="text-xl font-semibold mb-2">Membership of
+                    Professional Societies -</h3>
                 <div class="research-card bg-gray-100 p-6 rounded-lg shadow-md">
                     <p class="text-gray-600">
-                        <li>PLife Member of the Biotech Research Society (BRSI), India </li>
-                        <li>International Forum of Industrial Bioprocess (IFIBIOP), France </li>
-                        <li>Fellow of the Linnean Society of London (FLS London), London, United Kingdom </li>
+                        <li>PLife Member of the Biotech Research Society
+                            (BRSI), India </li>
+                        <li>International Forum of Industrial Bioprocess
+                            (IFIBIOP), France </li>
+                        <li>Fellow of the Linnean Society of London (FLS
+                            London), London, United Kingdom </li>
                     </p>
                 </div>
             </div>
@@ -265,29 +946,93 @@
     <section id="Contact" class="bg-blue-600 text-white py-16">
         <div class="container mx-auto px-4 text-center">
             <h2 class="text-3xl font-bold mb-6">Contact Me</h2>
-            <form id="contact-form" class="max-w-lg mx-auto">
-                <input type="text" id="name" placeholder="Your Name" required
+
+            <!-- Contact Form -->
+            <form id="contact-form" action="https://api.web3forms.com/submit" method="POST" class="max-w-lg mx-auto"
+                enctype="multipart/form-data">
+                <!-- REQUIRED: Access Key -->
+                <input type="hidden" name="access_key" value="0a0e1dc3-698b-4fca-af71-8ff666e066d0">
+
+                <!-- Subject of the email -->
+                <input type="hidden" name="subject" value="New Submission from Web3Forms">
+
+                <!-- From Name -->
+                <input type="hidden" name="from_name" value="Your Website Name">
+
+                <!-- CC Email -->
+                <input type="hidden" name="ccemail" value="partner@example.com">
+
+                <!-- Reply To -->
+                <input type="hidden" name="replyto" value="customer@example.com">
+
+                <!-- Redirect URL -->
+                <input type="hidden" name="redirect" value="https://web3forms.com/success">
+
+                <!-- Bot Check -->
+                <input type="checkbox" name="botcheck" style="display: none;">
+
+                <!-- Webhook (optional) -->
+                <input type="hidden" name="webhook" value="WEBHOOK_URL_HERE">
+
+                <!-- reCaptcha (optional) -->
+                <input type="hidden" name="recaptcha_response" id="recaptchaResponse">
+
+                <input type="file" id="attachment" name="attachment" class="w-full p-3 mb-4 rounded text-gray-800">
+
+                <!-- Name Input -->
+                <label for="name" class="block text-left mb-2">Your
+                    Name</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required
                     class="w-full p-3 mb-4 rounded text-gray-800">
-                <input type="email" id="email" placeholder="Your Email" required
+
+                <!-- Email Input -->
+                <label for="email" class="block text-left mb-2">Your
+                    Email</label>
+                <input type="email" id="email" name="email" placeholder="Your Email" required
                     class="w-full p-3 mb-4 rounded text-gray-800">
-                <textarea id="message" placeholder="Your Message" required class="w-full p-3 mb-4 rounded text-gray-800"
-                    rows="5"></textarea>
-                <button type="submit" class="bg-white text-blue-600 px-6 py-3 rounded hover:bg-blue-100">Send
-                    Message</button>
+
+                <!-- Phone Number Input -->
+                <label for="phone" class="block text-left mb-2">Phone
+                    Number</label>
+                <input type="text" id="phone" name="Phone Number" placeholder="Your Phone Number" required
+                    class="w-full p-3 mb-4 rounded text-gray-800">
+
+                <!-- Message Input -->
+                <label for="message" class="block text-left mb-2">Your
+                    Message</label>
+                <textarea id="message" name="message" placeholder="Your Message" required
+                    class="w-full p-3 mb-4 rounded text-gray-800" rows="5"></textarea>
+
+                    
+                <!-- Submit Button -->
+                <button type="submit" class="bg-white text-blue-600 px-6 py-3 rounded hover:bg-blue-100">
+                    Send Message
+                </button>
             </form>
+
+            <!-- Notification Message -->
+            <div id="notification" class="mt-4 hidden p-4 bg-green-600 text-white rounded">
+                Your data has been submitted successfully!
+            </div>
+
+            <!-- Social Media Links -->
             <div class="flex justify-center space-x-6 mt-8">
-                <a href="mailto:daniel.thompson@stanford.edu" class="contact-icon hover:text-blue-200">
-                    <i data-feather="mail" class="w-8 h-8"></i>
+                <a href="mailto:daniel.thompson@stanford.edu" class="contact-icon hover:text-blue-200" target="_blank"
+                    rel="noopener noreferrer">
+                    <i class="fas fa-envelope text-2xl"></i>
                 </a>
-                <a href="#" class="contact-icon hover:text-blue-200">
-                    <i data-feather="linkedin" class="w-8 h-8"></i>
+                <a href="https://www.linkedin.com/in/balendu-shekher-giri-fls-london-mnasc-india-11955418/"
+                    class="contact-icon hover:text-blue-200" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-linkedin text-2xl"></i>
                 </a>
-                <a href="#" class="contact-icon hover:text-blue-200">
-                    <i data-feather="twitter" class="w-8 h-8"></i>
+                <a href="https://twitter.com/yourusername" class="contact-icon hover:text-blue-200" target="_blank"
+                    rel="noopener noreferrer">
+                    <i class="fab fa-twitter text-2xl"></i>
                 </a>
             </div>
         </div>
     </section>
+
 </body>
 
 </html>
